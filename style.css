@@ -1,0 +1,212 @@
+body {
+    
+    margin: 0 auto;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_container {
+    display: flex;
+   
+    align-items: flex-start;
+    width: 80%;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.left_container{
+    flex: 900 1;
+ 
+}
+
+.layer {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.right_container{
+    flex: 300 1;
+    align-self: start;
+    margin-top: 20px;
+}
+
+.attribution {
+    margin: 20px 0;
+}
+
+.attribution a{
+    text-decoration: none;
+    color: hsl(263, 55%, 52%);
+}
+
+.attribution a:hover{
+    text-decoration: underline;
+}
+
+.cell {
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#t_1 {
+    background-color: hsl(263, 55%, 52%);
+    flex: 300 1;
+}
+
+#t_2 {
+    margin-top: 20px;
+    background-color:hsl(217, 19%, 35%);
+    flex: 300 1 ;
+}
+
+#t_3 {
+    background-color: hsl(0, 0%, 100%);
+    flex: 300 1 ;
+    margin-top: 20px;
+
+}
+
+#t_4 {
+    margin-top: 20px;
+    background-color:hsl(219, 29%, 14%);
+    flex: 300 1;
+}
+
+#t_5 {
+    
+    background-color: hsl(0, 0%, 100%) ;
+    flex: 300 1;
+}
+
+.t_info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.t_avatar {
+    min-width: 50px;
+    height: 50px;  
+    border: 2px solid hsl(0, 0%, 60%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 10px;
+}
+
+#t_1 .t_avatar {
+    background: url(images/image-daniel.jpg) no-repeat center ;
+}
+#t_2 .t_avatar {
+    background: url(images/image-jonathan.jpg) no-repeat center ;
+}
+#t_3 .t_avatar {
+    background: url(images/image-jeanette.jpg) no-repeat center ;
+}
+#t_4 .t_avatar {
+    background: url(images/image-patrick.jpg) no-repeat center ;
+}
+#t_5 .t_avatar {
+    background: url(images/image-kira.jpg) no-repeat center ;
+}
+
+.t_name{
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    font-family: inherit;
+    margin-top: 10px;
+    
+}
+
+.t_status {
+    color: hsl(0, 0%, 60%);
+    margin-top: -10px;
+}
+
+
+.t_subject {
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 20px;
+}
+
+#t_3 .t_name, #t_3 .t_subject, #t_5 .t_name , #t_5 .t_subject{
+    color: hsl(217, 19%, 35%);
+}
+.t_body {
+    font-weight: 500;
+    color: hsl(0, 0%, 60%);
+    line-height: 1.2rem;
+}
+
+#t_1 .t_body {
+   color: hsl(0, 0%, 70%);
+}
+
+
+@media (min-width: 376px) {
+    .main_container {
+        flex-wrap: nowrap;
+    }
+
+    .left_container{
+        margin-right: 20px;
+    }
+
+    .right_container{
+        margin-top: 0px;
+    }
+    .layer {
+        flex-wrap: nowrap;
+    }    
+
+
+    #t_1 {
+
+        flex: 600 1;
+        margin: 0 20px 0 0;
+    }
+    
+    #t_2 {
+  
+        flex: 300 1 ;
+    }
+    
+    #t_3 {
+        flex: 300 1 ;
+        margin-right: 20px;
+    }
+    
+    #t_4 {
+     
+        flex: 600 1;
+    }
+    
+    #t_5 {
+        background-color: hsl(0, 0%, 100%) ;
+        
+    }
+}
+
+@media (min-width: 767px){
+    #t_2 {
+        margin-top: 0px;
+    }
+} 
