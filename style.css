@@ -11,31 +11,40 @@ body {
 }
 
 .main_container {
-    display: flex;
-   
-    align-items: flex-start;
-    width: 80%;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.left_container{
-    flex: 900 1;
- 
-}
-
-.layer {
-    display: flex;
     
-    flex-wrap: wrap;
-    justify-content: center;
+    max-width: 1200px;
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "t_1 t_1 t_2 t_5"
+    "t_3 t_4 t_4 t_5";
 }
 
-.right_container{
-    flex: 300 1;
-    align-self: start;
-    margin-top: 20px;
+#t_1{
+    grid-area: t_1;
+    background-color: hsl(263, 55%, 52%);
 }
+
+#t_2{
+    grid-area: t_2;
+    background-color: hsl(217, 19%, 35%);
+}
+#t_3{
+    grid-area: t_3;
+    background-color: hsl(0, 0%, 100%);
+}
+#t_4{
+    grid-area: t_4;
+    background-color: hsl(219, 29%, 14%);
+}
+#t_5{
+    grid-area: t_5;
+    background-color: hsl(0, 0%, 100%);
+}
+
 
 .attribution {
     margin: 20px 0;
@@ -57,37 +66,10 @@ body {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    margin: 10px;
 }
 
-#t_1 {
-    background-color: hsl(263, 55%, 52%);
-    flex: 300 1;
-}
 
-#t_2 {
-    margin-top: 20px;
-    background-color:hsl(217, 19%, 35%);
-    flex: 300 1 ;
-}
-
-#t_3 {
-    background-color: hsl(0, 0%, 100%);
-    flex: 300 1 ;
-    margin-top: 20px;
-
-}
-
-#t_4 {
-    margin-top: 20px;
-    background-color:hsl(219, 29%, 14%);
-    flex: 300 1;
-}
-
-#t_5 {
-    
-    background-color: hsl(0, 0%, 100%) ;
-    flex: 300 1;
-}
 
 .t_info {
     display: flex;
@@ -161,52 +143,21 @@ body {
 }
 
 
-@media (min-width: 376px) {
+@media only screen and (max-width: 1025px) {
     .main_container {
-        flex-wrap: nowrap;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5fr 1fr 1fr 1.5fr 2fr;
+        grid-template-areas: 
+        "t_1"
+        "t_2"
+        "t_3"
+        "t_4"
+        "t_5";
     }
 
-    .left_container{
-        margin-right: 20px;
-    }
 
-    .right_container{
-        margin-top: 0px;
-    }
-    .layer {
-        flex-wrap: nowrap;
-    }    
-
-
-    #t_1 {
-
-        flex: 600 1;
-        margin: 0 20px 0 0;
-    }
-    
-    #t_2 {
   
-        flex: 300 1 ;
-    }
+
     
-    #t_3 {
-        flex: 300 1 ;
-        margin-right: 20px;
-    }
-    
-    #t_4 {
-     
-        flex: 600 1;
-    }
-    
-    #t_5 {
-        background-color: hsl(0, 0%, 100%) ;
-        
-    }
 }
 
-@media (min-width: 767px){
-    #t_2 {
-        margin-top: 0px;
-    }
-} 
